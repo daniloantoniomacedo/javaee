@@ -2,6 +2,8 @@ package br.com.alura.entidade;
 
 import java.util.Objects;
 
+//import java.util.Objects;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,9 +18,14 @@ public class AgendamentoEmail {
 	
 	private String email;
 	
-	private String menssagem; 
-	
 	private String assunto;
+	
+	private String mensagem; 
+	
+	private Boolean agendado;
+	
+	public AgendamentoEmail() {
+	}
 
 	public String getEmail() {
 		return email;
@@ -27,13 +34,13 @@ public class AgendamentoEmail {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public String getMenssagem() {
-		return menssagem;
+	
+	public String getMensagem() {
+		return mensagem;
 	}
 
-	public void setMenssagem(String menssagem) {
-		this.menssagem = menssagem;
+	public void setMensagem(String mensagem) {
+		this.mensagem = mensagem;
 	}
 
 	public String getAssunto() {
@@ -42,6 +49,14 @@ public class AgendamentoEmail {
 
 	public void setAssunto(String assunto) {
 		this.assunto = assunto;
+	}
+	
+	public Boolean getAgendado() {
+		return agendado;
+	}
+
+	public void setAgendado(Boolean agendado) {
+		this.agendado = agendado;
 	}
 
 	@Override
