@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <!DOCTYPE xml>
 <persistence>
-    <persistence-unit name="AgendamentoEmailDS">       
-		<jta-data-source>java:/AgendamentoEmailDS</jta-data-source>
+    
+    <persistence-unit name="AgendamentoEmailDS">  
+      
+		<jta-data-source>java:/AgendamentoEmailDS</jta-data-source>	   
+		
+		<properties>
+        	<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+        	<property name="hibernate.show_sql" value="true"/>
+        	<property name="hibernate.format_sql" value="true"/>
+        	<property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>    
+		
     </persistence-unit> 
+    
 </persistence>

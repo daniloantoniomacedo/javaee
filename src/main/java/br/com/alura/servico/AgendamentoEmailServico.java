@@ -23,7 +23,7 @@ public class AgendamentoEmailServico {
 	}
 	
 	public void inserir(AgendamentoEmail agendamentoEmail) {
-		agendamentoEmail.setAgendado(false);
+		//agendamentoEmail.setAgendado(false);
 		agendamentoEmailDAO.inserir(agendamentoEmail);
 	}
 
